@@ -1,7 +1,8 @@
 const  { OwnersAndCars, Cars, mainModel } = require('../model/carData');
-const { nanoid } = require('nanoid')
 
 const SubmitDataController = async (req, res) => {
+
+    const { nanoid } = await import('nanoid');
 
     if(!req?.body?.fullName){
         return res.status(400).json({'message': 'Full Name required'})
